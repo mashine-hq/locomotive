@@ -1,0 +1,109 @@
+%section#services.services-section
+  .container
+    .row.text-center
+      .col-xs-4
+        .large-icon
+          %i.glyphicon.glyphicon-cog
+        .text-large Разрабатываем новые проекты
+      .col-xs-4
+        .large-icon
+          %i.glyphicon.glyphicon-fullscreen
+        .text-large Развиваем существующие проекты
+      .col-xs-4
+        .large-icon
+          %i.glyphicon.glyphicon-send
+        .text-large Помогаем стартапам
+    .row.text-center
+      .col-xs-4
+        .large-icon
+          %i.glyphicon.glyphicon-phone-alt
+        .text-large Поддерживаем наших клиентов
+      .col-xs-4
+        .large-icon
+          %i.glyphicon.glyphicon-lock
+        .text-large Автоматизируем бизнес процессы
+      .col-xs-4
+        .large-icon
+          %i.glyphicon.glyphicon-cloud-upload
+        .text-large Разрабатываем API интерфейсы
+
+%section#howitworks.howitworks
+  .container
+    %h2.text-center Как мы работаем
+    .row
+      .col-xs-3.col-xs-offset-1
+        %h3 0 фаза
+        %div
+          Процесс начинается с нулевой фазы, которая включает встречу с клиентом и обзор списка возможностей который должны быть реализованы.
+      .col-xs-3.col-xs-offset-1
+        %h3 1 Черновики
+        %div
+          Составляем черновики страниц которые должны быть реализованы и производим рассчет стоимости проекта.
+      .col-xs-3.col-xs-offset-1
+        %h3 3 Реализация
+        %div
+          Из черновиков, мы строим самый минимальный но рабочий сайт, используя разработку через тестирование.
+          Это позволяет нам показать рабочий вариант, хотя и не полнофункциональный продукт, в руки заказчика в кратчайшее сроки.
+    .row
+      .col-xs-3.col-xs-offset-1
+        %h3 4 Итерация
+        %div
+          В это время  мы работаем с клиентом чтобы добавить "вещи которые работают" в продукт, и которые нравятся клиенту.
+          На протяжени этого времени требуется почти постоянный контакт с клиентом.
+      .col-xs-3.col-xs-offset-1
+        %h3 5 Доставка
+        %div
+          Теперь мы доставляем текущую рабочую версию продукта из рук в руки клиенту.
+          С этого момента пользователи могут начать работать с сайтом, чтобы построить не только продукт который планировал клиент,
+          но и продукт, и пожелания конечных пользователей.
+      .col-xs-3.col-xs-offset-1
+        %h3 6 Рост
+        %div
+          Веб программное обеспечение представляет собой живое, дышущее существо. Образно, конечно. Вы хотите добавить и уточнить функции,
+          чтобы получить клиентов и держать их счастливыми. Мы стремимся сохранить тонкую обратную связь между
+          добавлением новой функциональности и работоспособностью.
+
+%section#projects.projects
+  .container
+    %h2.text-center Выполненные проекты
+
+    .row.text-center
+      .col-xs-4
+        = image_tag('sites/shoplinkz-thumb.png', class: 'img-thumbnail', title: '')
+      .col-xs-4
+        = image_tag('sites/helperchat-thumb.png', class: 'img-thumbnail', title: '')
+      .col-xs-4
+        = image_tag('sites/rubyclub-thumb.png', class: 'img-thumbnail', title: '')
+    %br/
+    .row.text-center
+      .col-xs-4
+        = image_tag('sites/aboutme-thumb.png', class: 'img-thumbnail', title: '')
+      .col-xs-4
+        = image_tag('sites/nikon-club-thumb.png', class: 'img-thumbnail', title: '')
+      .col-xs-4
+        = image_tag('sites/your-site-thumb.png', class: 'img-thumbnail', alt: 'Ваше место', title: 'Место для вашего сайта')
+
+%section#contacts
+  .container
+    %h2.text-center Связаться с нами
+    .row
+      .col-xs-11.col-xs-offset-1
+        = form_for '/feedback', method: 'post', role: 'form' do |f|
+          .row.form-group
+            .col-xs-2
+              %label Имя
+            .col-xs-6
+              = text_field_tag :name, '', class: 'form-control'
+          .row.form-group
+            .col-xs-2
+              %label Емейл
+            .col-xs-6
+              = text_field_tag :email, '', class: 'form-control'
+          .row.form-group
+            .col-xs-2
+              %label Сообщение
+            .col-xs-6
+              = text_area_tag :message, '', class: 'form-control', rows: '3'
+          .row.form-group
+            .col-xs-6.col-xs-offset-2
+              = f.submit 'Отправить', class: 'btn btn-success'

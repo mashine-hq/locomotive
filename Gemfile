@@ -33,16 +33,15 @@ group :doc do
 end
 
 gem 'haml'
+gem 'haml-rails'
 gem 'bootstrap-sass', '~> 3.0.3.0'
 
 group :development, :test do
   gem 'rspec-rails'
 end
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development

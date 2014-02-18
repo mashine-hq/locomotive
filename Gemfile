@@ -35,11 +35,14 @@ gem 'haml'
 gem 'haml-rails'
 gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'pg', group: :production
-gem 'capistrano', group: :development
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'sqlite3'
+  gem 'capistrano'
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
 end
 
 # Use unicorn as the app server

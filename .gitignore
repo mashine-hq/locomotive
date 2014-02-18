@@ -16,3 +16,4 @@
 /tmp
 .ruby-gemset
 config/database.yml
+.idea/*

@@ -95,3 +95,7 @@ footer .logo {
   height: 30px;
   width: auto;
 }
+
+img[data-toggle='popover'] {
+  cursor: pointer;
+}

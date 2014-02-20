@@ -1,0 +1,15 @@
+ru:
+  activemodel:
+    errors:
+      models:
+        contact:
+          attributes:
+            name:
+              blank: 'Не может быть пусто'
+            email:
+              blank: 'Не может быть пусто'
+              invalid: 'Не похоже на email'
+            message:
+              blank: 'Не может быть пусто'
+              too_short: 'Слишком короткое'
+              too_long: 'Слишком длинное'              

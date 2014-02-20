@@ -1,0 +1,15 @@
+production:
+  USER: user
+  PASS: pass
+  HOST: localhost
+  MAIL_TO: production@localhost
+development:
+  USER: user
+  PASS: pass
+  HOST: localhost
+  MAIL_TO: development@localhost
+test:
+  USER: user
+  PASS: pass
+  HOST: localhost
+  MAIL_TO: test@localhost

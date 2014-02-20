@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   end
 
   def notify
-    @contact = Contact.new(params.permit(:name, :email, :message))
+    @contact = Contact.new(params[:contact].permit(:name, :email, :message))
     if @contact.valid? && ContactMailer.notify(@contact).deliver
       flash.now[:delivered] = 'Message was succesfully sent!'
     end

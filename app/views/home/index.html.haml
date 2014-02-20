@@ -92,17 +92,8 @@
           .alert.alert-success
             %a{:class => "close", "data-dismiss" => "alert"} ×
             = flash[:delivered]
-        = form_for @contact, url: contacts_path, method: 'post', role: 'form' do |f|
-          - if @contact.errors.any?
-            - @contact.errors.full_messages.each do |msg|
-              .alert.alert-danger
-                %a{:class => "close", "data-dismiss" => "alert"} ×
-                = msg
-          .row.form-group
-            = text_field_tag :name, '', class: 'form-control', placeholder: 'Имя'
-          .row.form-group
-            = text_field_tag :email, '', class: 'form-control', placeholder: 'Email'
-          .row.form-group
-            = text_area_tag :message, '', class: 'form-control', rows: '3', placeholder: 'Сообщение'
-          .row.form-group.text-center
-            = f.submit 'Отправить', class: 'btn btn-success btn-lg col-xs-12'
+        = simple_form_for @contact, url: contacts_path, method: 'post', role: 'form' do |f|
+          = f.input :name, placeholder: 'Имя', label: false
+          = f.input :email, placeholder: 'Email', label: false 
+          = f.input :message, as: :text, input_html: {rows: '3'}, placeholder: 'Сообщение', label: false
+          = f.submit 'Отправить', class: 'btn btn-success btn-lg col-xs-12'

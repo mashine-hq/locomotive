@@ -9,6 +9,9 @@ class HomeController < ApplicationController
     if @contact.valid? && ContactMailer.notify(@contact).deliver
       flash.now[:delivered] = 'Message was succesfully sent!'
     end
-    render :index
+    respond_to do |format|
+      format.html { render index }
+      format.js {}
+    end
   end
 end

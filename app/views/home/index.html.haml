@@ -88,12 +88,4 @@
     %h2.text-center Связаться с нами
     .row
       .col-xs-6.col-xs-offset-3
-        - if flash[:delivered]
-          .alert.alert-success
-            %a{:class => "close", "data-dismiss" => "alert"} ×
-            = flash[:delivered]
-        = simple_form_for @contact, url: contacts_path, method: 'post', role: 'form' do |f|
-          = f.input :name, placeholder: 'Имя', label: false
-          = f.input :email, placeholder: 'Email', label: false 
-          = f.input :message, as: :text, input_html: {rows: '3'}, placeholder: 'Сообщение', label: false
-          = f.submit 'Отправить', class: 'btn btn-success btn-lg col-xs-12'
+        = render(:partial => "form")

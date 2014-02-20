@@ -1,0 +1,9 @@
+= simple_form_for @contact, url: contacts_path, method: 'post', role: 'form', remote: true do |f|
+  - if flash[:delivered]
+    .alert.alert-success
+      %a{:class => "close", "data-dismiss" => "alert"} ×
+      = flash[:delivered]
+  = f.input :name, placeholder: 'Имя', label: false
+  = f.input :email, placeholder: 'Email', label: false 
+  = f.input :message, as: :text, input_html: {rows: '3'}, placeholder: 'Сообщение', label: false
+  = f.submit 'Отправить', class: 'btn btn-success btn-lg col-xs-12'

@@ -87,23 +87,22 @@
   .container
     %h2.text-center Связаться с нами
     .row
-      .col-xs-11.col-xs-offset-1
-        = form_for '/feedback', method: 'post', role: 'form' do |f|
+      .col-xs-6.col-xs-offset-3
+        - if flash[:delivered]
+          .alert.alert-success
+            %a{:class => "close", "data-dismiss" => "alert"} ×
+            = flash[:delivered]
+        = form_for @contact, url: contacts_path, method: 'post', role: 'form' do |f|
+          - if @contact.errors.any?
+            - @contact.errors.full_messages.each do |msg|
+              .alert.alert-danger
+                %a{:class => "close", "data-dismiss" => "alert"} ×
+                = msg
           .row.form-group
-            .col-xs-2
-              %label Имя
-            .col-xs-6
-              = text_field_tag :name, '', class: 'form-control'
+            = text_field_tag :name, '', class: 'form-control', placeholder: 'Имя'
           .row.form-group
-            .col-xs-2
-              %label Емейл
-            .col-xs-6
-              = text_field_tag :email, '', class: 'form-control'
+            = text_field_tag :email, '', class: 'form-control', placeholder: 'Email'
           .row.form-group
-            .col-xs-2
-              %label Сообщение
-            .col-xs-6
-              = text_area_tag :message, '', class: 'form-control', rows: '3'
-          .row.form-group
-            .col-xs-6.col-xs-offset-2
-              = f.submit 'Отправить', class: 'btn btn-success'
+            = text_area_tag :message, '', class: 'form-control', rows: '3', placeholder: 'Сообщение'
+          .row.form-group.text-center
+            = f.submit 'Отправить', class: 'btn btn-success btn-lg col-xs-12'

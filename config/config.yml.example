@@ -3,13 +3,18 @@ production:
   PASS: pass
   HOST: localhost
   MAIL_TO: production@localhost
+  MAIL_FROM: 'noreply@prologic.com.ua'
+
 development:
   USER: user
   PASS: pass
   HOST: localhost
   MAIL_TO: development@localhost
+  MAIL_FROM: 'noreply@prologic.com.ua'
+
 test:
   USER: user
   PASS: pass
   HOST: localhost
   MAIL_TO: test@localhost
+  MAIL_FROM: 'noreply@prologic.com.ua'

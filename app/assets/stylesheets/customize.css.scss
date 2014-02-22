@@ -1,4 +1,6 @@
 $backgriund-color: #2ba3d4;
+$green: #5CB85C;
+
 html {
   background: $backgriund-color image_url('background.svg') 50% 0 no-repeat;
   background-attachment: fixed;
@@ -44,6 +46,13 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5em;
     color: #5BC0DE;
     text-shadow: 0 0 1px #fff;
+  }
+  .pro, .pro:hover {
+    background: $green;
+    color: #FFF;
+    margin-top: 7px;
+    margin-right: 10px;
+    padding: 5px;
   }
   .dropdown-menu {
     background: $backgriund-color;
@@ -93,7 +102,7 @@ section {
 
 footer {
   background-color: #252525;
-  padding: 50px 0;
+  padding: 30px 0;
 }
 
 footer, footer a {

@@ -3,7 +3,9 @@
     .alert.alert-success
       %a{:class => "close", "data-dismiss" => "alert"} ×
       = flash[:delivered]
-  = f.input :name, placeholder: 'Имя', label: false
-  = f.input :email, placeholder: 'Email', label: false 
-  = f.input :message, as: :text, input_html: {rows: '3'}, placeholder: 'Сообщение', label: false
+  = f.input :name, placeholder: 'Имя', label: false, input_html: { title: 'Имя'}
+  = f.input :email, placeholder: 'Email', label: false, input_html: {title: 'Email'}
+  = f.input :phone, placeholder: 'Телефон', label: false, input_html: {title: 'Телефон'}
+  = f.input :message, as: :text, input_html: {rows: '4', title: 'Описание проекта'},
+    placeholder: 'Напишите несколько слов о проеке и мы свяжемся с Вами в ближайшее время.', label: false
   = f.submit 'Отправить', class: 'btn btn-success btn-lg col-xs-12'

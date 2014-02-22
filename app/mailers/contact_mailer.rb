@@ -1,6 +1,6 @@
 # contact mailer class
 class ContactMailer < ActionMailer::Base
-  default from: 'noreply@prologic.com.ua', to: APP_CONFIG['MAIL_TO']
+  default from: APP_CONFIG['MAIL_FROM'], to: APP_CONFIG['MAIL_TO']
 
   def notify(contact)
     @contact = contact

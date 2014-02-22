@@ -69,7 +69,7 @@
 
     .row.text-center
       .col-xs-4
-        = image_tag('sites/your-site-thumb.png', class: 'img-thumbnail', alt: 'Ваше место', title: 'Место для вашего сайта')
+        = link_to(image_tag('sites/your-site-thumb.png', class: 'img-thumbnail', alt: 'Ваше место', title: 'Место для вашего сайта'), '#contacts', title: 'Кликни что бы занять')
       .col-xs-4
         = image_tag('sites/shoplinkz-thumb.png', class: 'img-thumbnail', title: '', 'data-toggle' => 'popover', 'data-content' => "Сервис для закладок товаров, социального шопинга. Интеграция с Facebook, google+, Amazon, Ebay, Twitter.", 'data-original-title' => "shoplinkz.com", 'data-placement' => "bottom")
       .col-xs-4

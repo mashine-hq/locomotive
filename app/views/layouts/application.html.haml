@@ -1,19 +1,27 @@
 !!!
 %html
   %head
-    %title Locomotive
-    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag "application", "data-turbolinks-track" => true
+    %title ProLogic - разработка веб систем для автоматизации базнеса
+    = stylesheet_link_tag  'application', media: 'all'
+    = javascript_include_tag 'application'
     = csrf_meta_tags
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+    %meta{name: 'description', content: 'Разработка веб сайтов различной сложности. Сайты с высокой нагрузкой. API и соцсети интеграции и тестирование. Анализ производительности существущих проектов.'}
   %body
     #home.head-section
       %nav.navbar.navbar-default.box-shadow{role: 'navigation'}
         .container
+          %span.navbar-brand PRO
+          %span.navbar-brand.normal Logic
           %ul.nav.navbar-nav.pull-right
             %li <a href="#home">Начало</a>
             %li <a href="#services">Возможности</a>
             %li <a href="#howitworks">Процесс</a>
+            %li.dropdown
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Сервисы <b class="caret"></b></a>
+              %ul.dropdown-menu
+                %li <a href="http://helperchat.com">HelperChat</a>
+
             %li <a href="#projects">Работы</a>
             %li <a href="#contacts">Контакты</a>
 
